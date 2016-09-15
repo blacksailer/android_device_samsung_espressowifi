@@ -246,6 +246,18 @@ service geomagneticd /system/bin/geomagneticd
     user compass
     group system input
 
+# standart mediaserver also needed (call this like binary name)
+service mediaserver /system/bin/mediaserver
+    class main
+    user media
+    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm qcom_diag
+    ioprio rt 4
+
+# for sensors
+service sensorservice /system/bin/sensorservice
+    class main
+    user root
+    group root
 
 # FUSE sdcard daemon for rich permissions (runs as media_rw)
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
