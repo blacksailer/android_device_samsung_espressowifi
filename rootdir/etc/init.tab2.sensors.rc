@@ -111,3 +111,8 @@ service geomagneticd /system/bin/geomagneticd
     class main
     user compass
     group system input
+
+service sensorservice /system/bin/sensorservice
+    class main
+    user root
+    group root
