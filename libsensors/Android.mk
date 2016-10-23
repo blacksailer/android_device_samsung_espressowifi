@@ -21,15 +21,16 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
 	piranha_sensors.c \
 	input.c \
-	bh1721.c \
 	bma250.c \
-	gp2a_light.c \
+	light.c \
 	gp2a_proximity.c \
 	yas530.c \
 	yas_orientation.c
 
 LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH)
+
+LOCAL_CFLAGS := -Wall -Werror
 
 LOCAL_SHARED_LIBRARIES := libutils libcutils liblog libhardware
 LOCAL_PRELINK_MODULE := false
@@ -48,6 +49,8 @@ LOCAL_SRC_FILES := \
 	geomagneticd.c \
 	input.c
 
+LOCAL_CFLAGS := -Wall -Werror
+
 LOCAL_SHARED_LIBRARIES := libutils libcutils liblog
 LOCAL_PRELINK_MODULE := false
 
@@ -65,6 +68,8 @@ LOCAL_SRC_FILES := \
 	input.c \
 	bma250.c \
 	yas530.c
+
+LOCAL_CFLAGS := -Wall -Werror
 
 LOCAL_SHARED_LIBRARIES := libutils libcutils liblog
 LOCAL_PRELINK_MODULE := false
