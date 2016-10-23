@@ -104,12 +104,12 @@ on post-fs-data
 
 service orientationd /system/bin/orientationd
     class main
-    user compass
+    user root
     group input
 
 service geomagneticd /system/bin/geomagneticd
     class main
-    user compass
+    user root
     group system input
 
 service sensorservice /system/bin/sensorservice
